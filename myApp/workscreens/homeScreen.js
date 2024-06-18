@@ -1,5 +1,8 @@
 import React from "react";
-import { View,Text,StyleSheet,FlatList,Image } from "react-native";
+import { View,Text,StyleSheet,FlatList,Image, ScrollView } from "react-native";
+import JobItem from "../components/jobtask";
+import PopularJobs from "../components/jobCard";
+
 
 const jobDatas= [
     { id: '1', title: 'Exercise', icon: require('../assets/icon.png') },
@@ -14,7 +17,17 @@ const jobDatas= [
 
   const HomeScreen = ()=>{
     return(
+      
       <View>
+          <View >
+            
+            <Text>Eric Atsu</Text>
+          </View>
+
+          <View>
+            <Text>eric@gmail.com</Text>
+            <Image sou/>
+          </View>
         <FlatList
         data={jobDatas}
         horizontal
@@ -29,7 +42,9 @@ const jobDatas= [
         )}
         keyExtractor={(item)=> item.id}
         />
+        <PopularJobs/>
       </View>
+      
     );
   };
 
