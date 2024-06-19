@@ -7,7 +7,7 @@ const CustomButton=({onPress,title})=>{
           <Text style={styles.buttonText}>{title}</Text>
       </TouchableOpacity> 
     );
-};
+    };
 
 const styles = StyleSheet.create({
     button: {

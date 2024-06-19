@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Image } from 'react-native';
+import React from 'react';
+import { useState } from 'react';
+import { View, Text, TextInput, StyleSheet, Image, Button } from 'react-native';
 import CustomButton from '../components/Custom';  
+
 
 export default function LoginScreen({ navigation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleclick = () => {
-    navigation.navigate('Home', { name, email });  
+    console.log('Navigating to Home screen with', { name, email });
+    navigation.navigate('home', { name, email });
   };
+  
 
   return (
     <View style={styles.root}>
+      
+     
+
       <View style={styles.topgroup}>
         <Text style={styles.title}>Jobizz</Text>
 
@@ -38,6 +45,8 @@ export default function LoginScreen({ navigation }) {
         />
       </View>
 
+      
+
       <CustomButton title="Log in" onPress={handleclick} />
 
       <View style={styles.separator}>
@@ -59,7 +68,7 @@ export default function LoginScreen({ navigation }) {
     </View>
 
   );
-}
+};
 
 const styles = StyleSheet.create({
   root: {
